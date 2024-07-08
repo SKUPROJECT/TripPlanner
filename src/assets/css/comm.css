@@ -1,0 +1,116 @@
+/*폰트 설정 RixInooAriDuri Regular */
+/*@font-face {
+    font-family: 'Rix-normal';
+    src: url('../font/RixInooAriDuri Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Rix-title';
+    src: url('../font/RixInooAriDuri Regular.ttf') format('truetype');
+    font-weight: 900;
+}*/
+
+/* 기본 글씨체 사용 */
+@font-face { 
+    font-family: 'yang-normal';
+    src: url('../font/양진체v0.9_otf.otf') format('opentype');
+    font-weight: 700;
+}
+
+/* 굵은 폰트 사용 */
+@font-face {
+    font-family: 'yang-title';
+    src: url('../font/양진체v0.9_otf.otf') format('opentype');
+    font-weight: 400;
+}
+
+.yang-normal{
+    font-family: 'yang-normal';
+}
+
+.yang-title{
+    font-family: 'yang-title';
+}
+
+
+/* 사용할 컬러 */
+.color_white{
+    color:white;
+}
+
+.bgcolor_white{
+    background-color: white;
+}
+
+.color_black{
+    color:black;
+}
+
+.bgcolor_black{
+    background-color: black;
+}
+
+.color_wgray{
+    color:#d9d9d9;
+}
+
+.bgcolor_wgray{
+    background-color: #d9d9d9;
+}
+
+.color_gray{
+    color:#B8B8B8;
+}
+
+.bgcolor_gray{
+    background-color: #B8B8B8;
+}
+
+.color_sblue{
+    color:#007AFF;
+}
+
+.bgcolor_sblue{
+    background-color: #007AFF;
+}
+
+.color_wblue{
+    color:#429EF5;
+}
+
+.bgcolor_wblue{
+    background-color: #429EF5;
+}
+
+.color_mwblue{
+    color:#B3E0FF;
+}
+
+.bgcolor_mwblue{
+    background-color: #B3E0FF;
+}
+
+.color_wpink{
+    color:#FFC0CB;
+}
+
+.bgcolor_wpink{
+    background-color: #FFC0CB;
+}
+
+.color_yellow{
+    color:#FFFF00;
+}
+
+.bgcolor_yellow{
+    background-color: #FFFF00;
+}
+
+.color_wyellow{
+    color:#FCEC03;
+}
+
+.bgcolor_wyellow{
+    background-color: #FCEC03;
+}
