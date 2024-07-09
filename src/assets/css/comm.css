@@ -114,3 +114,8 @@
 .bgcolor_wyellow{
     background-color: #FCEC03;
 }
+
+.router-link { /* 라우터 CSS 적용 */
+    color: inherit; /* 부모 요소의 색상 상속 */
+    text-decoration: none;
+}
