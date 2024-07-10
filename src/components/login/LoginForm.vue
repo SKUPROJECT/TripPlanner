@@ -16,7 +16,7 @@
     Login with Google
     </button>
     <div class="links yang-normal color_wblue">
-      <span><router-link :to="{ path: '/loginSearch', query: { type: 'id' } }" class="router-link">아이디 찾기</router-link></span> <span>/</span> <span><router-link :to="{ path: '/loginSearch', query: { type: 'pw' } }" class="router-link">비밀번호 찾기</router-link></span>
+      <span><router-link :to="{ path: '/loginSearch', query: { tab: 'findId' } }" class="router-link">아이디 찾기</router-link></span> <span>/</span> <span><router-link :to="{ path: '/loginSearch', query: { tab: 'findPassword' } }" class="router-link">비밀번호 찾기</router-link></span>
     </div>
   </form>
 </template>
