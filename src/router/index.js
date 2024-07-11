@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import LoginForm from '@/components/login/LoginForm.vue'
-import LoginSearch from '@/components/login/LoginSearch.vue'
+import LoginForm from '@/views/login/LoginForm.vue'
+import LoginSearch from '@/views/login/LoginSearch.vue'
+import MyPage from '@/views/mypage/MyPage.vue'
 
 const routes = [
     {
@@ -12,6 +13,11 @@ const routes = [
         path: '/loginSearch',
         name: 'LoginSearch',
         component: LoginSearch
+    },
+    {
+        path: '/myPage',
+        name: 'MyPage',
+        component : MyPage
     }
 ]
 
