@@ -99,6 +99,22 @@
     background-color: #FFC0CB;
 }
 
+.color_mwpink{
+    color:#FFF7FF;
+}
+
+.bgcolor_mwpink{
+    background-color: #FFF7FF;
+}
+
+.color_purple{
+    color:#6A5ACD;
+}
+
+.bgcolor_purple{
+    background-color: #6A5ACD;
+}
+
 .color_yellow{
     color:#FFFF00;
 }
@@ -113,4 +129,9 @@
 
 .bgcolor_wyellow{
     background-color: #FCEC03;
+}
+
+.router-link { /* 라우터 CSS 적용 */
+    color: inherit; /* 부모 요소의 색상 상속 */
+    text-decoration: none;
 }
