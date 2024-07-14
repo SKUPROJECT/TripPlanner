@@ -2,22 +2,35 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LoginForm from '@/views/login/LoginForm.vue'
 import LoginSearch from '@/views/login/LoginSearch.vue'
 import MyPage from '@/views/mypage/MyPage.vue'
+import SignUp1 from '@/views/signup/SignUp1.vue'
 
 const routes = [
+    /* 1. 로그인 창 */
     {
         path: '/',
         name: 'LoginForm',
         component: LoginForm
     },
+
+    /* 2. 아이디/비밀번호 찾기 */
     {
         path: '/loginSearch',
         name: 'LoginSearch',
         component: LoginSearch
     },
+
+    /* 3. 마이페이지 */
     {
         path: '/myPage',
         name: 'MyPage',
         component : MyPage
+    },
+
+    /* 4. 회원가입 창 */
+    {
+        path:'/signUp',
+        name:'signUp',
+        component : SignUp1
     }
 ]
 

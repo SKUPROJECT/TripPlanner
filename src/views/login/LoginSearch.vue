@@ -1,9 +1,7 @@
 <template>
   <div class="container-box">
     <div class="back_wrap">
-      <router-link :to="{path:'/'}">
-        <img src="@/assets/img/back.png" alt="back" class="back" />
-      </router-link>
+      <img src="@/assets/img/back.png" alt="back" class="back" @click="$router.go(-1)"/>
     </div>
     <img src="@/assets/img/airplane-icon.png" alt="Logo" class="logo" />
       <div class="find-form">
@@ -108,6 +106,7 @@
     width: 20px;
     height: 20px;
     margin-top:0.75rem;
+    cursor:pointer;
   }
 
   .logo {
