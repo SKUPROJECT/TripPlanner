@@ -11,7 +11,7 @@
         <input type="password" id="password" class="yang-normal color_wgray" v-model="password" placeholder="Value" required />
       </div>
       <button type="submit" class="btn yang-title color_white bgcolor_mwblue">Log in</button>
-      <button type="button" class="btn yang-title color_white bgcolor_wblue" @click="signup">Sign Up</button>
+      <button type="button" class="btn yang-title color_white bgcolor_wblue" @click="this.$router.push('/signUp');">Sign Up</button>
       <button type="button" class="google-btn yang-title color_white bgcolor_wpink" @click="loginWithGoogle">
       <img src="@/assets/img/g-logo.png" alt="Google logo" />
       Login with Google
@@ -36,8 +36,7 @@
         console.log('Logging in with', this.email, this.password);
       },
       signup() {
-        // Handle signup
-        console.log('Sign up');
+        
       },
       loginWithGoogle() {
         // Handle Google login
