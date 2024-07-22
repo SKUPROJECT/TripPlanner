@@ -3,6 +3,9 @@ import LoginForm from '@/views/login/LoginForm.vue'
 import LoginSearch from '@/views/login/LoginSearch.vue'
 import MyPage from '@/views/mypage/MyPage.vue'
 import SignUp1 from '@/views/signup/SignUp1.vue'
+import PlaceInfo from '@/views/place/PlaceInfo.vue'
+import ReviewForm from '@/views/place/reviewForm.vue'
+import ReviewManage from '@/views/mypage/reviewManage.vue'
 
 const routes = [
     /* 1. 로그인 창 */
@@ -31,6 +34,27 @@ const routes = [
         path:'/signUp',
         name:'signUp',
         component : SignUp1
+    },
+
+    /* 5. 여행지 정보 창 */
+    {
+        path:'/placeInfo',
+        name:'PlaceInfo',
+        component : PlaceInfo
+    },
+
+    /* 6. 리뷰등록 Form */
+    {
+        path:'/reviewForm',
+        name:'ReviewForm',
+        component : ReviewForm
+    },
+
+    /* 7. 내 리뷰 관리 Form */
+    {
+        path:'/reviewManage',
+        name:'ReviewManage',
+        component : ReviewManage
     }
 ]
 
