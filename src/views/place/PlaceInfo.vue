@@ -120,8 +120,8 @@
   .place-box{
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    height:0; /* Footer 고정이 꼬이지 않기 위해 body-box와 맞춰야 한다. (높이가 높은경우는 상관없음)*/
+    text-align: center; 
+    height:100vh;  /* Footer 고정이 꼬이지 않기 위해 body-box와 맞춰야 한다.*/
   }
 
   .body-box{
