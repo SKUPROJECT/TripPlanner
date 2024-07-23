@@ -3,6 +3,9 @@ import LoginForm from '@/views/login/LoginForm.vue'
 import LoginSearch from '@/views/login/LoginSearch.vue'
 import MyPage from '@/views/mypage/MyPage.vue'
 import SignUp1 from '@/views/signup/SignUp1.vue'
+import SignUp2 from '@/views/signup/SignUp2.vue'
+import NameVerification from '@/views/signup/NameVerification.vue' 
+import DoubleCheck from '@/views/signup/DoubleCheck.vue'
 
 const routes = [
     /* 1. 로그인 창 */
@@ -31,7 +34,22 @@ const routes = [
         path:'/signUp',
         name:'signUp',
         component : SignUp1
-    }
+    },
+    {
+        path:'/SignUp2',
+        name:'signUp2',
+        component : SignUp2
+    },
+    {
+        path:'/NameVerification',
+        name:'nameVerification',
+        component : NameVerification
+    } ,
+    {
+        path:'/DoubleCheck',
+        name:'doubleCheck',
+        component : DoubleCheck
+    } 
 ]
 
 const router = createRouter({

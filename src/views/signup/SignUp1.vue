@@ -1,8 +1,4 @@
 <template>
-  <!-- <div class="hello">
-    <h1>{{ msg }}</h1>
-  </div> -->
-
   <main>
 
     <header>
@@ -33,20 +29,18 @@
 		</article>
 
 
-    <div class="btn_next"> 
-		<router-link to="/SignUp2">다음</router-link>
-	</div>
+    <div class="btn_next" @click="this.$router.push('/signUp2')"> 다음 </div>
   </main>
 
 </template>
 
 <script>
-export default {
-  name: 'SignUp1',
-  props: {
-    msg: String
-  }
-}
+// export default {
+//   name: 'SignUp1',
+//   props: {
+//     msg: String
+//   }
+// }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -100,6 +94,7 @@ nav {
 .agree_check { 
 	background-color: #B8B8B8;
 	border-radius: 10px;
+	border: 1px solid black;
 	float: left;
 	width:18px;
 	height:18px;
@@ -126,6 +121,7 @@ nav {
 	border-radius: 5px;
 }
 .btn_next{
+	text-align: center;
 	margin: 0 auto;
 	margin-top: 250px;
 	padding-top: 5px;
