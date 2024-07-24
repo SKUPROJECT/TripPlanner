@@ -6,6 +6,9 @@ import SignUp1 from '@/views/signup/SignUp1.vue'
 import SignUp2 from '@/views/signup/SignUp2.vue'
 import NameVerification from '@/views/signup/NameVerification.vue' 
 import DoubleCheck from '@/views/signup/DoubleCheck.vue'
+import PlaceInfo from '@/views/place/PlaceInfo.vue'
+import ReviewForm from '@/views/place/reviewForm.vue'
+import ReviewManage from '@/views/mypage/reviewManage.vue'
 
 const routes = [
     /* 1. 로그인 창 */
@@ -49,7 +52,27 @@ const routes = [
         path:'/DoubleCheck',
         name:'doubleCheck',
         component : DoubleCheck
-    } 
+    }, 
+    /* 5. 여행지 정보 창 */
+    {
+        path:'/placeInfo',
+        name:'PlaceInfo',
+        component : PlaceInfo
+    },
+
+    /* 6. 리뷰등록 Form */
+    {
+        path:'/reviewForm',
+        name:'ReviewForm',
+        component : ReviewForm
+    },
+
+    /* 7. 내 리뷰 관리 Form */
+    {
+        path:'/reviewManage',
+        name:'ReviewManage',
+        component : ReviewManage
+    }
 ]
 
 const router = createRouter({
