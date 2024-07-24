@@ -3,6 +3,9 @@ import LoginForm from '@/views/login/LoginForm.vue'
 import LoginSearch from '@/views/login/LoginSearch.vue'
 import MyPage from '@/views/mypage/MyPage.vue'
 import SignUp1 from '@/views/signup/SignUp1.vue'
+import SignUp2 from '@/views/signup/SignUp2.vue'
+import NameVerification from '@/views/signup/NameVerification.vue' 
+import DoubleCheck from '@/views/signup/DoubleCheck.vue'
 import PlaceInfo from '@/views/place/PlaceInfo.vue'
 import ReviewForm from '@/views/place/reviewForm.vue'
 import ReviewManage from '@/views/mypage/reviewManage.vue'
@@ -35,7 +38,21 @@ const routes = [
         name:'signUp',
         component : SignUp1
     },
-
+    {
+        path:'/SignUp2',
+        name:'signUp2',
+        component : SignUp2
+    },
+    {
+        path:'/NameVerification',
+        name:'nameVerification',
+        component : NameVerification
+    } ,
+    {
+        path:'/DoubleCheck',
+        name:'doubleCheck',
+        component : DoubleCheck
+    }, 
     /* 5. 여행지 정보 창 */
     {
         path:'/placeInfo',
