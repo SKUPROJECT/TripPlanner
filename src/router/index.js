@@ -4,6 +4,7 @@ import LoginSearch from '@/views/login/LoginSearch.vue'
 import MyPage from '@/views/mypage/MyPage.vue'
 import SignUp1 from '@/views/signup/SignUp1.vue'
 import SignUp2 from '@/views/signup/SignUp2.vue'
+import SignUp3 from '@/views/signup/SignUp3.vue'
 import NameVerification from '@/views/signup/NameVerification.vue' 
 import DoubleCheck from '@/views/signup/DoubleCheck.vue'
 import PlaceInfo from '@/views/place/PlaceInfo.vue'
@@ -42,6 +43,11 @@ const routes = [
         path:'/SignUp2',
         name:'signUp2',
         component : SignUp2
+    },
+    {
+        path:'/SignUp3',
+        name:'signUp3',
+        component : SignUp3
     },
     {
         path:'/NameVerification',
