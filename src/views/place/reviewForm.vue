@@ -20,7 +20,7 @@
   import FooterComponent from '@/components/common/FooterComponent.vue';
 
   export default {
-    name: 'reviewForm',
+    name: 'ReviewForm',
     components: {
         HeaderComponent, FooterComponent
     },
