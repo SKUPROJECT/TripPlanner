@@ -8,8 +8,9 @@ import SignUp3 from '@/views/signup/SignUp3.vue'
 import NameVerification from '@/views/signup/NameVerification.vue' 
 import DoubleCheck from '@/views/signup/DoubleCheck.vue'
 import PlaceInfo from '@/views/place/PlaceInfo.vue'
-import ReviewForm from '@/views/place/reviewForm.vue'
-import ReviewManage from '@/views/mypage/reviewManage.vue'
+import ReviewForm from '@/views/place/ReviewForm.vue'
+import ReviewManage from '@/views/mypage/ReviewManage.vue'
+import PlaceRecom from '@/views/place/PlaceRecom.vue'
 
 const routes = [
     /* 1. 로그인 창 */
@@ -78,6 +79,13 @@ const routes = [
         path:'/reviewManage',
         name:'ReviewManage',
         component : ReviewManage
+    },
+
+    /* 8. 여행지 추천 페이지 */
+    {
+        path:'/placeRecom',
+        name:'PlaceRecom',
+        component : PlaceRecom
     }
 ]
 

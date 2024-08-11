@@ -28,7 +28,7 @@
         <div class="profile-tag yang-normal color_wgray">#20대 #남성 #isfj #액티비티 #음식</div>
         <div class="profile-msg yang-normal color_wgray">안녕하십니까 임태양 입니다.</div>
         <div class="list-container yang-normal">
-          <div class="list-item" @click="this.$router.push('placeInfo');">
+          <div class="list-item" @click="this.$router.push('placeRecom');">
               <div class="icon">🏖️</div>
               <div class="text">여행지 추천 코스</div>
           </div>
