@@ -32,7 +32,7 @@
   import FooterComponent from '@/components/common/FooterComponent.vue';
 
   export default {
-    name: 'reviewManage',
+    name: 'ReviewManage',
     components: {
         HeaderComponent, FooterComponent
     },
