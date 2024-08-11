@@ -1,6 +1,7 @@
-<template>
-  <main>
 
+<template>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <main>
     <header>
       <span class="title_head">회원가입</span>
 	</header>
@@ -9,21 +10,21 @@
     
 		<article>
 			<p class="agree_article">
-				<span class="agree_check"></span>
+				<span @click="toggleCheck" ><i :class="iconClass"></i></span>				
 				<span class="agree_title">개인정보보호를 위한 이용자 동의</span>
 				<span class="agree_detail">자세히 보기</span>
 			</p>
 			<div class="agree_content"> </div>
 		
 			<p class="agree_article">
-				<span class="agree_check"></span>
+				<span @click="toggleCheck" ><i :class="iconClass"></i></span>				
 				<span class="agree_title">서비스 이용약관 동의</span>
 				<span class="agree_detail">자세히 보기</span>
 			</p>
 			<div class="agree_content"> </div>
 		
 			<p class="agree_article">
-				<span class="agree_check"></span>
+				<span @click="toggleCheck" ><i :class="iconClass"></i></span>				
 				<span class="agree_title">만 14세 이상입니다</span>
 			</p>
 		</article>
@@ -31,16 +32,27 @@
 
     <div class="btn_next" @click="this.$router.push('/signUp2')"> 다음 </div>
   </main>
-
 </template>
 
 <script>
-// export default {
-//   name: 'SignUp1',
-//   props: {
-//     msg: String
-//   }
-// }
+	export default {
+		name: 'CheckIcon',
+		data() {
+			return {
+			isChecked: false,
+			};
+		},
+		computed: {
+			iconClass() {
+			return this.isChecked ? 'fas fa-check' : 'far fa-circle';
+			},
+		},
+        methods: {
+          toggleCheck(){
+            this.isChecked = !this.isChecked;
+          }
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
