@@ -5,12 +5,11 @@ import MyPage from '@/views/mypage/MyPage.vue'
 import SignUp1 from '@/views/signup/SignUp1.vue'
 import SignUp2 from '@/views/signup/SignUp2.vue'
 import SignUp3 from '@/views/signup/SignUp3.vue'
-import NameVerification from '@/views/signup/NameVerification.vue' 
-import DoubleCheck from '@/views/signup/DoubleCheck.vue'
 import PlaceInfo from '@/views/place/PlaceInfo.vue'
 import ReviewForm from '@/views/place/ReviewForm.vue'
 import ReviewManage from '@/views/mypage/ReviewManage.vue'
 import PlaceRecom from '@/views/place/PlaceRecom.vue'
+import PlaceNear from '@/views/place/PlaceNear.vue'
 
 const routes = [
     /* 1. 로그인 창 */
@@ -37,28 +36,18 @@ const routes = [
     /* 4. 회원가입 창 */
     {
         path:'/signUp',
-        name:'signUp',
+        name:'SignUp',
         component : SignUp1
     },
     {
-        path:'/SignUp2',
-        name:'signUp2',
+        path:'/signUp2',
+        name:'SignUp2',
         component : SignUp2
     },
     {
         path:'/SignUp3',
-        name:'signUp3',
+        name:'SignUp3',
         component : SignUp3
-    },
-    {
-        path:'/NameVerification',
-        name:'nameVerification',
-        component : NameVerification
-    } ,
-    {
-        path:'/DoubleCheck',
-        name:'doubleCheck',
-        component : DoubleCheck
     }, 
     /* 5. 여행지 정보 창 */
     {
@@ -86,6 +75,13 @@ const routes = [
         path:'/placeRecom',
         name:'PlaceRecom',
         component : PlaceRecom
+    },
+
+    /* 9. 내 근처 여행자 확인*/
+    {
+        path:'/placeNear',
+        name:'PlaceNear',
+        component : PlaceNear
     }
 ]
 

@@ -1,54 +1,46 @@
 <template>
-<div class="main">
-<header>
-    <span class="title_head">회원가입</span>
-</header>
-<div class="title">
-000님, 가입을 축하드립니다!
-</div>
-
-<div class="container">
-<button class="btn_next" @click="this.$router.push('/')"> 다음 </button>
-</div>
-
-</div>
+  <div class="signup3_wrap">
+    <SignUpHeaderComponent></SignUpHeaderComponent>
+      <div class="title yang-normal">000님, 가입을 축하드립니다!</div>
+      <div class="btn_next bgcolor_wblue color_white yang-normal" @click="this.$router.push('/')">
+          <span class="btn_txt">로그인 페이지로 이동하기</span>
+      </div>
+  </div>
 </template>    
+<script>
+    import SignUpHeaderComponent from '@/components/common/SignUpHeaderComponent.vue';
 
+    export default {
+      name:'SignUp3',
+      components: {
+        SignUpHeaderComponent
+      }
+    }
+</script>
 <style scoped>
-.main{
-	font-family:'yang-normal';
-	width: 360px;
-	height:640px;
-}
-a {
-  color: #42b983;
-}
-header { 
-	background-color:#007AFF;
-	opacity: 20%;
-	width:100%;
-	height:41px;
-	margin: 0 auto;	
-}
-.title_head { 
-  display: flex;
-  justify-content: center; /* 수평 중앙 정렬 */
-  /* align-items: center; */
-  padding-top: 10px;
-  font-size:16px;
-}
-.title{
-  display: flex;
-  justify-content: center; 
-}
-.container{
-  display: flex;
-  justify-content: center; /* 수평 중앙 정렬 */
-  align-items: center; /* 수직 중앙 정렬 (옵션) */
-  height: 100vh;
-}
-.btn_next{
-  width: 70%;
-  height: 30px;
-}
+  .signup3_wrap {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width:360px;
+    height:640px;
+  }
+
+  .signup3_wrap .title{
+    margin-top:0.5rem;
+    display: flex;
+    justify-content: center; 
+  }
+
+  .signup3_wrap .btn_next{
+		text-align: center;
+    margin:0.5rem auto;
+		width: 320px;
+		height: 30px;
+		border-radius: 5px;
+		cursor:pointer;
+	}
+
+  .signup3_wrap .btn_next .btn_txt{
+		margin-top:0.25rem;
+		display: inline-block;
+	}
 </style>

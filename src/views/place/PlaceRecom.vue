@@ -19,7 +19,7 @@
                     <li>6. 일본 도쿄</li>
                 </ul>
             </div>
-            <div class="best-place-recom">
+            <div class="best-place-recom" @click="this.$router.push('placeInfo');">
                 <div class="best-place-wrap">
                     <img src="@/assets/img/airplane-icon.png" alt="Logo"/>
                     <span class="best-title yang-normal">OOO님을 위한 여행지</span>                  
@@ -115,10 +115,23 @@
     font-size: 0.8rem;
   }
 
+  .body-box .best-place ul li{
+    cursor:pointer;
+  }
+
+  .body-box .best-place ul li:hover{
+    color:#B3E0FF;
+  }
+
   .body-box .best-place-recom{
     border-radius: 0.5rem;
     border:1px solid #B3E0FF;
     margin-bottom:1rem;
+    cursor:pointer;
+  }
+
+  .body-box .best-place-recom:hover{
+    background-color:#B3E0FF;
   }
 
   .body-box .best-place-recom .best-place-wrap{
@@ -132,6 +145,7 @@
   .body-box .best-place-recom .best-place-wrap img{
     width:25px;
     height:25px;
+    border-radius: 50%;
   }
 
   .body-box .best-place-recom .best-place-wrap .best-title{
