@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>trip.ico">
+    <script src="https://maps.googleapis.com/maps/api/js?key=your_key&libraries=marker"></script>
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
@@ -14,3 +15,23 @@
     <div id="app"></div>
   </body>
 </html>
+<script>
+  function initMap() {
+    // 지도 중심의 좌표 설정
+    const location = { lat: 37.7749, lng: -122.4194 }; // 샌프란시스코 좌표 예시
+
+    // 지도 초기화
+    const map = new google.maps.Map(document.getElementById('map-wrap'), {
+        zoom: 12,
+        center: location,
+        mapId: 'DEMO_MAP_ID'
+    });
+
+    // The advanced marker, positioned at Uluru
+    const marker = new google.maps.marker.AdvancedMarkerElement({
+        map,
+        position: location,
+        title: 'Uluru',
+    });
+  }
+</script>

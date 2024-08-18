@@ -10,6 +10,7 @@ import ReviewForm from '@/views/place/ReviewForm.vue'
 import ReviewManage from '@/views/mypage/ReviewManage.vue'
 import PlaceRecom from '@/views/place/PlaceRecom.vue'
 import PlaceNear from '@/views/place/PlaceNear.vue'
+import MapInfo from '@/views/map/mapInfo.vue'
 
 const routes = [
     /* 1. 로그인 창 */
@@ -82,6 +83,13 @@ const routes = [
         path:'/placeNear',
         name:'PlaceNear',
         component : PlaceNear
+    },
+    
+    /* 10. 현 위치 명소, 근처 여행자 확인 */
+    {
+        path:'/mapInfo',
+        name:'MapInfo',
+        component : MapInfo
     }
 ]
 

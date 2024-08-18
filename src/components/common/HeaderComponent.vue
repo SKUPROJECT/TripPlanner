@@ -1,7 +1,7 @@
 <template>
     <div class="header bgcolor_white yang-title">
       <span class="headerTitle">{{headerTitle}}</span>
-      <button class="header_hamburger" @click="this.$router.push('placeNear')">&#9776;</button>
+      <button class="header_hamburger" @click="this.$router.push('mapInfo')">&#9776;</button>
     </div>
 </template>
   
