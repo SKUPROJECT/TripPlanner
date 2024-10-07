@@ -12,10 +12,11 @@
       </div>
       <button type="submit" class="btn yang-title color_white bgcolor_mwblue">Log in</button>
       <button type="button" class="btn yang-title color_white bgcolor_wblue" @click="this.$router.push('/signUp');">Sign Up</button>
-      <button type="button" class="google-btn yang-title color_white bgcolor_wpink" @click="loginWithGoogle">
+      <button type="button" class="google-btn yang-title color_white bgcolor_wpink" id="G_OAuth_btn">
       <img src="@/assets/img/g-logo.png" alt="Google logo" />
       Login with Google
       </button>
+      <div id="my-signin2" style="display: none"></div>
       <div class="links yang-normal color_wblue">
         <span><router-link :to="{ path: '/loginSearch', query: { tab: 'findId' } }" class="router-link">아이디 찾기</router-link></span> <span>/</span> <span><router-link :to="{ path: '/loginSearch', query: { tab: 'findPassword' } }" class="router-link">비밀번호 찾기</router-link></span>
       </div>
@@ -23,6 +24,7 @@
   </div>
 </template>
 <script>
+import axios from 'axios';
   export default {
     data() {
       return {
@@ -30,19 +32,65 @@
         password: '',
       };
     },
+    mounted(){
+      this.googleInit();
+    },
     methods: {
+      googleInit(){
+        let google = window.google;
+        google.accounts.id.initialize({
+          client_id: "316275300590-5ca30g48v74pa4847gs9tgaj1jafcshu.apps.googleusercontent.com",
+          callback: this.googleCallback,
+        });
+
+        google.accounts.id.renderButton(document.getElementById("G_OAuth_btn"), {
+          theme: "outline",
+          size: "large",
+        });
+      },googleCallback(res) {
+        console.log("res: ", res);
+
+        this.googleUser = this.decodeJWT(res.credential);
+        console.log(this.googleUser);
+      },
+      base64UrlDecode(base64Url) { /* 한글 디코딩 함수 */
+        const base64 = base64Url
+          .replace(/-/g, '+')
+          .replace(/_/g, '/');
+
+        const decoded = atob(base64);
+        return decodeURIComponent(escape(decoded));
+      },
+      decodeJWT(token) {
+        const base64Url = token.split('.')[1];
+        const jsonPayload = this.base64UrlDecode(base64Url);
+        return JSON.parse(jsonPayload);
+      },
       login() {
-        // Handle login
-        console.log('Logging in with', this.email, this.password);
+        const formData = new FormData();
+        formData.append('id', this.email);
+        formData.append('pw', this.password);
+
+        axios.post('http://localhost:9999/api/v1/member/token', formData)
+        .then(response => {
+          alert("로그인 성공"+response);
+          // response.data.accessToken
+          // response.data.refreshToken
+        })
+        .catch(error => {
+          if (error.response.status === 401) {
+            alert("아이디와 비밀번호가 일치하지 않습니다.");
+          } else if(error.response.status === 404){
+            alert("아이디가 존재하지 않습니다.");
+          } else{
+            alert("로그인에 실패했습니다.");
+          }
+        });
       },
       signup() {
         
-      },
-      loginWithGoogle() {
-        // Handle Google login
-        console.log('Login with Google');
-      },
-    },
+      }
+    }
   };
 </script>
   
