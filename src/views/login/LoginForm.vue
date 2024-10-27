@@ -11,9 +11,8 @@
         <input type="password" id="password" class="yang-normal color_wgray" v-model="password" placeholder="Value" required />
       </div>
       <button type="submit" class="btn yang-title color_white bgcolor_mwblue">Log in</button>
-      <!-- <button type="button" class="btn yang-title color_white bgcolor_wblue" @click="this.$router.push('/signUp');">Sign Up</button> -->
-      <button type="button" class="btn yang-title color_white bgcolor_wblue" @click="signup()">Sign Up</button>
-      <button type="button" class="google-btn yang-title color_white bgcolor_wpink" id="G_OAuth_btn">
+      <button type="button" class="btn yang-title color_white bgcolor_wblue" @click="this.$router.push('/signUp');">Sign Up</button>
+      <button type="button" class="google-btn yang-title color_white bgcolor_wpink" @click=loginWithGoogle(); id="G_OAuth_btn">
       <img src="@/assets/img/g-logo.png" alt="Google logo" />
       Login with Google
       </button>
@@ -25,8 +24,8 @@
   </div>
 </template>
 <script>
-  import { login, refresh } from '@/js/api'
-  import { googleInit } from '@/js/google';
+  import { login, refresh, getCookie} from '@/js/api'
+  import { loginWithGoogle} from '@/js/google';
   export default {
     data() {
       return {
@@ -35,7 +34,10 @@
       };
     },
     mounted(){
-      googleInit();
+      const jwt = getCookie("accessToken");
+      if(jwt){
+        this.$router.push('myPage');
+      }
     },
     methods: {
       login() {
@@ -44,7 +46,9 @@
 
       signup() {
         refresh();
-      }
+      },
+
+      loginWithGoogle
     }
   };
 </script>
