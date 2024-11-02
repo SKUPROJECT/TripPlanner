@@ -21,7 +21,7 @@ export const login = async (id, pw) => {
         /* 로그인 성공 시 토큰을 cookies에 저장 */
         saveToken("accessToken", response.data.accessToken);
         saveToken("refreshToken", response.data.refreshToken);
-        saveToken("id", id);
+        saveToken("id", response.data.id);
 
         /* 저장 후 페이지 이동 */
         router.push('myPage');
@@ -47,12 +47,32 @@ export const refresh = async () => {
     .then(response => {
         saveToken("accessToken", response.data.accessToken);
         saveToken("refreshToken", response.data.refreshToken);
+        saveToken("id", response.data.id);
     })
     .catch(error => {
         if (error.response.status === 400) {
             /* 로그아웃 처리 (로그인 페이지 이동) */
             router.push('/');
         }
+    });
+}
+
+/* Google 로그인 CallBack 함수 */
+export const googleLogin = async (token, type) => {
+    const path = url + "api/v1/member/googleLogin";
+    const formData = new FormData();
+    formData.append('googleToken', token);
+    formData.append('type', type);
+
+    await axios.post(path, formData)
+    .then(response => {
+         /* 토큰을 cookies에 저장 */
+         saveToken("accessToken", response.data.accessToken);
+         saveToken("refreshToken", response.data.refreshToken);
+         saveToken("id", response.data.id);
+ 
+         /* 저장 후 페이지 이동 */
+         router.push('myPage');
     });
 }
 

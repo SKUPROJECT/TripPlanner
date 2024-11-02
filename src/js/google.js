@@ -1,7 +1,7 @@
 /* Google 라이브러리 사용 JS */
 export const loginWithGoogle = () => {
     const clientId = "316275300590-5ca30g48v74pa4847gs9tgaj1jafcshu.apps.googleusercontent.com";
-    const redirectUri = "http://localhost:8080";
+    const redirectUri = "http://localhost:8080/googleLogin";
     const scope = "email profile";
     const responseType = "token";
 
